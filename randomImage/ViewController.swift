@@ -19,10 +19,10 @@ class ViewController: UIViewController {
         pickButtonView.setTitle("Press", for: UIControl.State.normal)
         pickButtonView.layer.cornerRadius = 16
     }
+    
+    let images: [String] = ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"]
 
     @IBAction func onPress(_ sender: Any) {
-        let images: [String] = ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"]
-        
         let image = images.randomElement()
         randomImageView.image = UIImage(named: image ?? "leo")
     }
